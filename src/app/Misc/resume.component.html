@@ -1,0 +1,13 @@
+<div class="componentdiv">
+	<p *ngIf='todayIsTuesday'>Today is Tuesday</p>
+	<p *ngIf='!todayIsTuesday'>Today is not Tuesday</p>
+	
+	<p><label>The text is: {{textForAdmin}}</label></p>
+	<button 
+		(click)= 'buttonClick()' 
+		*ngIf='isAdmin'>Button for Admins only!
+	</button>
+	<p>
+		<input [(ngModel)]="textForAdmin" type="text">
+	</p>
+</div>

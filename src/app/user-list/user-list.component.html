@@ -1,0 +1,27 @@
+<div>
+	<p *ngIf='!users'>Loading users list ...</p>
+	<table class="table table-sm">
+		<tr>
+			<th>ID</th>
+			<th>User name</th>
+			<th>Password</th>
+			<th>Name</th>
+			<th>Phone</th>
+			<th>Email</th>
+			<th>Is Admin</th>
+			<th>Is Reviewer</th>
+			<th>Actions</th>
+		</tr>
+		<tr *ngFor='let user of users'>
+			<td>{{user.ID}}</td>
+			<td>{{user.UserName}}</td>
+			<td>********</td>
+			<td>{{user.FirstName}} {{user.LastName}}</td>
+			<td>{{user.Phone}}</td>
+			<td>{{user.Email}}</td>
+			<td>{{user.IsAdmin ? "YES" : "NO"}}</td>
+			<td>{{user.IsReviewer ? "YES" : "NO"}}</td>
+			<td><a routerLink='/user/detail/{{user.ID}}'>Detail</a></td>
+		</tr>
+	</table>
+</div>
