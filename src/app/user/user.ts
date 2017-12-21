@@ -1,23 +1,29 @@
 export class User {
-	ID: number; 
-	UserName: string;
+	Id: number; 
+	Username: string;
 	Password: string;
-	FirstName: string;
-	LastName: string;
+	Firstname: string;
+	Lastname: string;
 	Phone: string;
 	Email: string;
-	IsAdmin: boolean;
-	IsReviewer: boolean;
+	Admin: boolean;
+	Reviewer: boolean;
+	Active: boolean;
+	Datecreated: Date;
 
-	constructor(id: number, username: string, password: string, firstname: string, lastname: string, phone: string, email: string, admin: boolean, reviewer: boolean) {
-		this.ID = id;
-		this.UserName = username;
+	constructor(id: number, username: string, password: string, firstname: string, 
+				lastname: string, phone: string, email: string, admin: boolean, 
+				reviewer: boolean, active: boolean, datecreated: Date) {
+		this.Id = id;
+		this.Username = username;
 		this.Password = password;
-		this.FirstName = firstname;
-		this.LastName = lastname;
+		this.Firstname = firstname;
+		this.Lastname = lastname;
 		this.Phone = phone;
 		this.Email = email;
-		this.IsAdmin = admin;
-		this.IsReviewer = reviewer;
+		this.Admin = admin;
+		this.Reviewer = reviewer;
+		this.Active = active;
+		this.Datecreated = datecreated;
 	}
 }

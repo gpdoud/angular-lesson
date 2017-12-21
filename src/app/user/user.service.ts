@@ -6,7 +6,8 @@ import 'rxjs/add/operator/map';
 import { User } from './user';
 
 //the URL's called from this service all have these elements
-const urlBase = 'http://prs.doudsystems.com/';
+// const urlBase = 'http://prs.doudsystems.com/';
+const urlBase = 'http://localhost:8080/';
 const mvcCtrl = 'Users/';
 const url: string = urlBase + mvcCtrl;
 
@@ -20,10 +21,10 @@ export class UserService {
 			.catch(this.handleError);
 	}
 
-    get(id): Promise<User> {
+    get(id): Promise<User[]> {
       return this.http.get(url+'Get?id=' + id)
       .toPromise()
-      .then(resp => resp.json() as User)
+      .then(resp => resp.json() as User[])
       .catch(this.handleError);
     }
 

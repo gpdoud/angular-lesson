@@ -22,7 +22,7 @@ export class UserDetailComponent implements OnInit {
   	this.route.paramMap
   		.switchMap((params: ParamMap) =>
   			this.UserSvc.get(params.get('id')))
-  		.subscribe((user: User) => this.user = user);
+  		.subscribe((users: User[]) => this.user = users[0]);
   }
 
 }

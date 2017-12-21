@@ -19,7 +19,7 @@ export class UserComponent implements OnInit {
 
   ngOnInit() {
   	// this.user = new User(1, 'adm', 'adm', 'greg', 'doud', '555-1212', 'info@maxtrain.com', true, true, true);
-  	this.user = new User(0,'', '', '', '', '', '', false, false, false);
+  	this.user = new User(0,'', '', '', '', '', '', false, false, false, new Date());
   	this.showConsole();
   }
 

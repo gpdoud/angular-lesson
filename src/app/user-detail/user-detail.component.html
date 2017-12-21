@@ -1,4 +1,12 @@
+<h3>User</h3>
 <table *ngIf='user' class='table table-sm'>
-  <tr><td>User Name</td><td>{{user.UserName}}</td></tr>
-  <tr><td>Name</td><td>{{user.FirstName}} {{user.LastName}}</td></tr>
+  <tr><td>User Name</td><td>{{user.Username}}</td></tr>
+  <tr><td>Password</td><td>{{user.Password}}</td></tr>
+  <tr><td>Name</td><td>{{user.Firstname}} {{user.Lastname}}</td></tr>
+  <tr><td>Phone</td><td>{{user.Phone}}</td></tr>
+  <tr><td>Email</td><td>{{user.Email}}</td></tr>
+  <tr><td>Admin</td><td>{{user.Admin}}</td></tr>
+  <tr><td>Reviewer</td><td>{{user.Reviewer}}</td></tr>
+  <tr><td>Active</td><td>{{user.Active}}</td></tr>
+  <tr><td>Created</td><td>{{user.Datecreated | date}}</td></tr>
 </table>
